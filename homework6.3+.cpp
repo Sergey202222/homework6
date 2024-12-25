@@ -1,14 +1,14 @@
 #include <iostream>
 
-long long fibonacci(long long);
+unsigned long long fibonacci(int);
 
 int main()
 {
 	setlocale(LC_ALL, "rus");
 	int number{};
-	std::cout << "Ââåäèòå ÷èñëî: ";
+	std::cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã¨Ã±Ã«Ã®: ";
 	std::cin >> number;
-	std::cout << "×èñëà Ôèáîíà÷÷è: ";
+	std::cout << "Ã—Ã¨Ã±Ã«Ã  Ã”Ã¨Ã¡Ã®Ã­Ã Ã·Ã·Ã¨: ";
 	for (int iNumber{ 1 }; iNumber <= number; ++iNumber)
 	{
 		std::cout << fibonacci(iNumber) << ' ';
@@ -16,7 +16,7 @@ int main()
 	return EXIT_SUCCESS;
 }
 
-long long fibonacci(long long number)
+unsigned long long fibonacci(int number)
 {
 	switch (number)
 	{
@@ -26,7 +26,7 @@ long long fibonacci(long long number)
 		return 1;
 
 	default:
-		long long penultimateNumber{}, lastNumber{ 1 }, numberFibonacci{};
+		unsigned long long penultimateNumber{}, lastNumber{ 1 }, numberFibonacci{};
 		int iteration{2};
 		while (iteration < number)
 		{
